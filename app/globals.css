@@ -2,32 +2,146 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+    @apply scroll-smooth;
+  }
+body {
+    @apply box-border w-screen overflow-x-hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+/* MOBILE TYPOGRAPHY */
+.mobile-display-large {
+  @apply text-[3.5625rem] leading-[4rem] font-normal -tracking-[0.015625rem]
+}
+.mobile-display-medium {
+  @apply text-[2.8125rem] leading-[3.25rem] font-normal tracking-normal
+}
+.mobile-display-small {
+  @apply text-[2.25rem] leading-[2.75rem] font-normal tracking-normal
+}
+.mobile-headline-large {
+  @apply text-[2rem] leading-[2.75rem] font-normal tracking-normal
+}
+.mobile-headline-medium {
+  @apply text-[1.75rem] leading-[2.25rem] font-normal tracking-normal
+}
+.mobile-headline-small {
+  @apply text-[1.5rem] leading-[2rem] font-normal tracking-normal
+}
+.mobile-title-large {
+  @apply text-[1.375rem] leading-[1.75rem] font-normal tracking-normal
+}
+.mobile-title-medium {
+  @apply text-[1rem] leading-[1.5rem] font-medium tracking-[0.009375rem]
+}
+.mobile-title-small {
+  @apply text-[0.875rem] leading-[1.25rem] font-medium tracking-[0.00625rem]
+}
+.mobile-body-large {
+  @apply text-[1rem] leading-[1.5rem] font-normal tracking-[0.03125rem]
+}
+.mobile-body-medium {
+  @apply text-[0.875rem] leading-[1.25rem] font-normal tracking-[0.015625rem]
+}
+.mobile-body-small {
+  @apply text-[0.75rem] leading-[1rem] font-normal tracking-[0.025rem]
+}
+.mobile-label-large {
+  @apply text-[0.875rem] leading-[1.25rem] font-medium tracking-[0.00625rem]
+}
+.mobile-label-prominent {
+  @apply text-[0.875rem] leading-[1.25rem] font-bold tracking-[0.00625rem]
+}
+.mobile-label-medium {
+  @apply text-[0.75rem] leading-[1rem] font-normal tracking-[0.03125rem]
+}
+.mobile-label-medium-prominent {
+  @apply text-[0.75rem] leading-[1rem] font-bold tracking-[0.03125rem]
+}
+.mobile-label-small {
+  @apply text-[0.6875rem] leading-[1rem] font-medium tracking-[0.03125rem]
+}
+
+/* TABLET TYPOGRAPHY */
+@screen md {
+  .md\:tablet-display-large {
+  @apply text-[4rem] leading-[4.4375rem] font-normal tracking-normal
+}
+.md\:tablet-display-medium {
+    @apply text-[3.5625rem] leading-[4rem] font-normal -tracking-[0.015625rem]
+  }
+  .md\:tablet-display-small {
+    @apply text-[2.8125rem] leading-[3.25rem] font-normal tracking-normal
+  }
+.md\:tablet-headline-large {
+  @apply text-[2.25rem] leading-[2.75rem] font-normal tracking-normal
+}
+.md\:tablet-headline-medium {
+    @apply text-[2rem] leading-[2.5rem] font-normal tracking-normal
+}
+.md\:tablet-headline-small {
+    @apply text-[1.5rem] leading-[2rem] font-medium tracking-normal
+}
+.md\:tablet-title-large {
+    @apply text-[1.5rem] leading-[2rem] font-medium tracking-normal
+}
+.md\:tablet-title-medium {
+    @apply text-[1.25rem] leading-[1.75rem] font-medium tracking-[0.009375rem]
+  }
+  .md\:tablet-title-small { 
+    @apply text-[1.125rem] leading-[1.25rem] font-medium tracking-[0.00625rem]
+  }
+  .md\:tablet-body-large {
+    @apply text-[1rem] leading-[1.5rem] font-normal tracking-[0.03125rem]
+  }
+.md\:tablet-body-medium {
+    @apply text-[0.875rem] leading-[1.25rem] font-normal tracking-[0.015625rem]
+}
+.md\:tablet-body-small {
+  @apply text-[0.75rem] leading-[1rem] font-normal tracking-[0.025rem]
+}
+.md\:tablet-label-large {
+    @apply text-[1rem] leading-[1.375rem] font-medium tracking-[0.00625rem]
+  }
+  .md\:tablet-label-medium {
+    @apply text-[0.875rem] leading-[1.125rem] font-normal tracking-[0.03125rem]
+  }
+  .md\:tablet-label-small {
+    @apply text-[0.75rem] leading-[1rem] font-medium tracking-[0.03125rem]
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* DEXTOP TYPOGRAPHY */
+@screen xl {
+  .xl\:desktop-heading-one {
+    @apply text-[6rem] leading-[6.5rem] font-light -tracking-[0.09375rem]
+  }
+  .xl\:desktop-heading-two {
+    @apply text-[3.75rem] leading-[4.25rem] font-light -tracking-[0.03125rem]
+  }
+  .xl\:desktop-heading-three {
+    @apply text-[3rem] leading-[3.5rem] font-normal tracking-normal
+  }
+  .xl\:desktop-heading-four {
+    @apply text-[2.125rem] leading-[2.625rem] font-normal tracking-[0.015625rem]
+  }
+  .xl\:desktop-heading-five {
+    @apply text-[1.5rem] leading-[2rem] font-normal tracking-normal
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.xl\:desktop-heading-six {
+    @apply text-[1.25rem] leading-[1.75rem] font-medium tracking-[0.009375rem]
+}
+.xl\:desktop-subtitle-one {
+    @apply text-[1rem] leading-[1.5rem] font-medium tracking-[0.009375rem]
+}
+.xl\:desktop-subtitle-two {
+    @apply text-[0.875rem] leading-[1.25rem] font-medium tracking-[0.00625rem]
+}
+.xl\:desktop-body-one { 
+    @apply text-[1rem] leading-[1.5rem] font-medium tracking-[0.03125rem]
+}
+.xl\:desktop-body-two {
+    @apply text-[0.875rem] leading-[1.25rem] font-normal tracking-[0.015625rem]
   }
 }
