@@ -6,9 +6,16 @@ html {
     @apply scroll-smooth;
   }
 body {
-    @apply box-border w-screen overflow-x-hidden;
+    @apply box-border flex flex-col justify-center   bg-surface-color text-on-surface-color;
 }
 
+.mysize {
+  @apply mx-4 md:mx-8 lg:max-w-[960px] lg:mx-auto xl:mx-32 xl:max-w-full 2xl:max-w-[1296px] 2xl:mx-auto sticky top-0 h-[768px];
+}
+
+.btn-primary {
+  @apply text-sm tracking-[0.00625rem] md:tracking-[0.078125rem] lg:tracking-[0.09375rem] font-medium lg:font-normal uppercase;
+}
 
 /* MOBILE TYPOGRAPHY */
 .mobile-display-large {
