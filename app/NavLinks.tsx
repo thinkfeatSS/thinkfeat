@@ -41,7 +41,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ navLinks }) => {
     };
 
     const handleClickOutside = (event: MouseEvent) => {
-        const mouseEvent = event as ReactMouseEvent;
+        const mouseEvent = event as unknown as ReactMouseEvent<Element, MouseEvent>;
 
         if (
             dropdownOpen !== null &&
