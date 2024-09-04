@@ -71,7 +71,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ navLinks }) => {
                         <>
                             <button
                                 onClick={() => toggleDropdown(index)}
-                                className="text-lg md:text-xl group transition-all ease-linear hover:text-on-surface-color"
+                                className="text-lg md:text-xl group transition-all ease-linear dark:hover:text-on-surface-color hover:text-surface-color dark:text-on-surface-color text-surface-color"
                             >
                                 <div className="flex gap-1">
                                     {link.title}
@@ -86,7 +86,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ navLinks }) => {
                                         transition={{ duration: 0.3, ease: 'easeOut' }}
                                     >
                                         <motion.span
-                                            className="absolute left-0 top-0 h-full bg-secondary group-hover:bg-primary"
+                                            className="absolute left-0 top-0 h-full dark:bg-secondary bg-secondary-container dark:group-hover:bg-primary group-hover:bg-on-primary"
                                             initial={{ width: '0%' }}
                                             animate={{ width: '100%' }}
                                             transition={{ duration: 0.3, ease: 'easeOut' }}
@@ -98,7 +98,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ navLinks }) => {
                             <AnimatePresence>
                                 {dropdownOpen === index && (
                                     <motion.div
-                                        className="absolute left-0 mt-2 bg-primary text-on-primary shadow-lg rounded-lg"
+                                        className="absolute left-0 mt-2 dark:bg-primary bg-on-primary dark:text-on-primary text-primary shadow-lg rounded-lg"
                                         initial="closed"
                                         animate="open"
                                         exit="closed"
@@ -108,7 +108,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ navLinks }) => {
                                             <Link
                                                 key={subIndex}
                                                 href={sublink.url}
-                                                className="block px-4 py-2 hover:bg-secondary hover:text-on-surface-color text-base md:text-lg rounded-lg"
+                                                className="block px-4 py-2 dark:bg-primary bg-on-primary dark:text-on-primary text-primary text-base md:text-lg rounded-lg"
                                             >
                                                 {sublink.title}
                                             </Link>
@@ -120,7 +120,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ navLinks }) => {
                     ) : (
                         <Link
                             href={link.url}
-                            className="text-lg md:text-xl group transition-all ease-linear hover:text-on-surface-color"
+                            className="text-lg md:text-xl group transition-all ease-linear dark:hover:text-on-surface-color text-surface-color"
                         >
                             {link.title}
                             {pathName === link.url && (
@@ -132,7 +132,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ navLinks }) => {
                                     transition={{ duration: 0.3, ease: 'linear' }}
                                 >
                                     <motion.span
-                                        className="absolute h-full bg-secondary group-hover:bg-primary transition-all ease-linear"
+                                        className="absolute h-full dark:bg-primary bg-on-primary dark:text-on-primary text-primary transition-all ease-linear"
                                         initial={{ width: '0%' }}
                                         animate={{ width: '100%' }}
                                         transition={{ duration: 0.3, ease: 'linear' }}

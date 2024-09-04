@@ -6,7 +6,7 @@ html {
     @apply scroll-smooth;
   }
 body {
-    @apply box-border flex flex-col justify-center   bg-surface-color text-on-surface-color;
+    @apply box-border flex flex-col justify-center bg-on-surface-color  dark:bg-surface-color;
 }
 
 .mysize {
