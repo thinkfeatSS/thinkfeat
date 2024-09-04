@@ -27,8 +27,6 @@ export default function RootLayout({
         <Providers>{children}
           <Navbar />
         </Providers>
-        {/* <div className="hello bg-white w-full h-20 md:bg-blue-500 lg:bg-purple-500 xl:bg-green-500 2sxl:bg-orange-500"></div> */}
-        {children}
       </body>
     </html>
   );
