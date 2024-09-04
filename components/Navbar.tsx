@@ -26,7 +26,6 @@ const Navbar: React.FC = () => {
     },
     { title: 'About', url: '/about' },
     { title: 'Contact', url: '/contact' },
-    { title: 'Happy Testing', url: '/happytesting' },
   ];
 
   const toggleDropdown = (index: number) => {
