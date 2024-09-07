@@ -29,7 +29,7 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.7 }}
           >
-            <p className="mobile-body-medium md:tablet-body-medium xl:desktop-body-two text-on-primary-container">
+            <p className="mobile-body-medium md:tablet-body-medium xl:desktop-body-two text-surface-color dark:text-on-surface-color">
               We deliver tailored software solutions, professional training, and expert guidance to help you thrive in the digital world.
             </p>
           </motion.div>
