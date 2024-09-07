@@ -1,9 +1,11 @@
+import Logo from '@/components/Logo'
+import UnderDev from '@/components/UnderDev'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      <h1>Contact</h1>
+    <div className='flex flex-col items-center justify-center h-screen'>
+      <UnderDev />
     </div>
   )
 }

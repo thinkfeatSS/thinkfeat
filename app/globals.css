@@ -9,6 +9,10 @@ body {
     @apply box-border flex flex-col justify-center bg-on-surface-color  dark:bg-surface-color;
 }
 
+.nav-icon {
+  @apply w-6 h-6 md:w-8 md:h-8 hover:scale-150 text-secondary dark:text-primary transition-all ease-linear;
+}
+
 .mysize {
   @apply mx-4 md:mx-8 lg:max-w-[960px] lg:mx-auto xl:mx-32 xl:max-w-full 2xl:max-w-[1296px] 2xl:mx-auto sticky top-0 h-[768px];
 }

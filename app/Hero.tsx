@@ -1,32 +1,10 @@
 'use client';
-import AnimatPrimarybtn from '@/components/AnimatPrimarybtn';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 
 const HeroSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [
-    { path: '/images/thinkeat software solutions class.jpg', alt: 'Software Development' },
-    { path: '/images/thinkeat software solutions meet.jpg', alt: 'Training Sessions' },
-    { path: '/images/thinkeat software solutions team.jpg', alt: 'Expert Guidance' },
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000); // Change slide every 4 seconds
-
-    return () => clearInterval(interval);
-  }, [images.length]);
-
-  const [darkMode, setDarkMode] = useState(false);
-  const toggleDarkmode = () => {
-    setDarkMode(!darkMode)
-  }
   return (
-    <div className={'${darkMode && "dark"}'}>
-      <section className="flex flex-col gap-4 md:gap-8 lg:gap-12 md:flex-row justify-center items-center dark:bg-surface-color bg-on-surface-color text-on-surface-color mx-4 md:mx-8 lg:max-w-[960px] lg:mx-auto xl:mx-32 xl:max-w-full 2xl:max-w-[1296px] 2xl:mx-auto sticky top-0 h-[768px]">
+      <section className="flex flex-col gap-4 md:gap-8 lg:gap-12 md:flex-row justify-center items-center dark:bg-surface-color bg-on-surface-color text-on-surface-color mx-4 md:mx-8 lg:max-w-[960px] lg:mx-auto xl:mx-32 xl:max-w-full 2xl:max-w-[1296px] 2xl:mx-auto">
         {/* Content on the left side */}
         <div className="w-full md:w-1/2 text-center md:text-left flex flex-col items-center justify-center md:items-start">
           <motion.h1
@@ -76,7 +54,6 @@ const HeroSection = () => {
         </div>
 
       </section>
-    </div>
 
   );
 };

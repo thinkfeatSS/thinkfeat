@@ -3,25 +3,29 @@ import { useState, useEffect, useRef, MouseEvent as ReactMouseEvent } from 'reac
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { useTheme } from 'next-themes';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaSortDown } from "react-icons/fa";
 import AnimatPrimarybtn from './AnimatPrimarybtn';
 import DarkMode from '@/components/DarkMode';
-import NavLinks from '@/app/NavLinks';
-import { BsMenuButtonWideFill } from "react-icons/bs"
+import NavLinks from '@/components/NavLinks';
+import { BsMenuButtonWideFill } from "react-icons/bs";
 import { RiCloseLargeFill } from "react-icons/ri";
+import { FaSortDown } from "react-icons/fa";
+import Logo from './Logo';
+
 const Navbar: React.FC = () => {
   const [dropdownOpen, setDropdownOpen] = useState<number | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const dropdownRefs = useRef<(HTMLDivElement | null)[]>([]);
   const pathName = usePathname();
+
   const navLinks = [
     { title: 'Home', url: '/' },
     {
       title: 'Services', url: '/services', dropdown: [
-        { title: 'Service', url: '/services/ai' },
-        { title: 'Service', url: '/services/ml' },
-        { title: 'Service', url: '/services/ds' },
+        { title: 'Website Development', url: '#' },
+        { title: 'Mobile Application', url: '#' },
+        { title: 'digital Marketing', url: '#' },
       ]
     },
     { title: 'About', url: '/about' },
@@ -45,6 +49,7 @@ const Navbar: React.FC = () => {
       setDropdownOpen(null);
     }
   };
+
 
   useEffect(() => {
     document.addEventListener('click', handleClickOutside, true);
@@ -79,43 +84,29 @@ const Navbar: React.FC = () => {
       y: '-100%',
       transition: { type: 'spring', stiffness: 200, damping: 25 }
     }
-
-
   };
-  const [darkMode, setDarkMode] = useState(false);
-  const toggleDarkmode = () => {
-    setDarkMode(!darkMode)
-  }
 
   return (
     <>
-      <div className={`${darkMode && "dark"}`}>
-        <nav className="z-[499] fixed top-0 left-0 flex items-center justify-center w-screen text-primary shadow-md backdrop-blur-lg px-4 md:px-8">
-          <div className='flex items-center justify-between w-full xl:w-[1296px]'>
-
-            <Image src="/images/thinkfeat logo.png" alt="logo" width={302} height={100} className='w-[151px] h-[50px] md:w-[302px] md:h-[100px]' />
-            {mobileMenuOpen ? <RiCloseLargeFill className="lg:hidden w-8 h-8 text-primary" onClick={toggleMobileMenu} /> : <BsMenuButtonWideFill className="lg:hidden w-8 h-8 text-primary" onClick={toggleMobileMenu} />}
-            <div className='hidden lg:flex'>
-
-              <NavLinks navLinks={navLinks} />
-            </div>
+      <nav className="z-[499] fixed top-0 left-0 flex items-center justify-center w-screen shadow-md backdrop-blur-lg px-4 md:px-8 py-2">
+        <div className='flex items-center justify-between w-full 2xl:w-[1296px]'>
+          <Logo />
+          <div className='hidden lg:flex'>
+            <NavLinks navLinks={navLinks} />
+          </div>
+          <div className='flex items-center justify-center gap-4'>
+            {mobileMenuOpen ? <RiCloseLargeFill className="lg:hidden nav-icon" onClick={toggleMobileMenu} /> : <BsMenuButtonWideFill className="lg:hidden nav-icon" onClick={toggleMobileMenu} />}
             <div className='hidden xl:block'>
               <AnimatPrimarybtn text="Share Your Idea" onClick={() => console.log("button click")} />
             </div>
-            {/* <button className='bg-black dark:bg-on-surface-color text-primary dark:text-on-primary'
-              onClick={toggleDarkmode}
-              >
-              {darkMode ? "LHT" : "DRK"}
-            </button> */}
-            <DarkMode  />
-
+            <DarkMode />
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            className="z-[999] fixed left-[4.5%] top-16 w-11/12 bg-primary text-on-primary shadow-lg rounded-lg lg:hidden z-50 flex flex-col gap-2 p-4 bg-opacity-80 backdrop-blur-md"
+            className="fixed left-[4.5%] top-20 md:top-32 w-11/12 bg-primary text-on-primary shadow-lg rounded-lg lg:hidden z-50 flex flex-col gap-2 p-4 bg-opacity-80 backdrop-blur-md"
             initial="closed"
             animate="open"
             exit="closed"
@@ -200,7 +191,6 @@ const Navbar: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
     </>
   );
 };
