@@ -1,5 +1,4 @@
-'use client';
-
+'use client'
 import { useState, useEffect, useRef, MouseEvent as ReactMouseEvent } from 'react';
 import { FaSortDown } from "react-icons/fa";
 import { usePathname } from 'next/navigation';

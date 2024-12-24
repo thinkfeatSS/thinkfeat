@@ -21,14 +21,16 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { title: 'Home', url: '/' },
+    { title: 'Courses', url: '#coursesection' },
     {
-      title: 'Services', url: '/services', dropdown: [
-        { title: 'Website Development', url: '#' },
-        { title: 'Mobile Application', url: '#' },
-        { title: 'digital Marketing', url: '#' },
-      ]
+      title: 'Services', url: '#servicessection'
+      // , dropdown: [
+      //   { title: 'Website Development', url: '#' },
+      //   { title: 'Mobile Application', url: '#' },
+      //   { title: 'digital Marketing', url: '#' },
+      // ]
     },
-    { title: 'About', url: '/about' },
+    { title: 'About', url: '#aboutsection' },
     { title: 'Contact', url: '/contact' },
   ];
 
@@ -88,7 +90,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="z-[499] fixed top-0 left-0 flex items-center justify-center w-screen shadow-md backdrop-blur-lg px-4 md:px-8 py-2">
+      <nav className="z-[499] fixed top-0 left-0 flex items-center justify-center w-screen shadow-md bg-on-surface-color dark:bg-black px-4 md:px-8 py-2">
         <div className='flex items-center justify-between w-full 2xl:w-[1296px]'>
           <Logo />
           <div className='hidden lg:flex'>
@@ -112,7 +114,7 @@ const Navbar: React.FC = () => {
             exit="closed"
             variants={mobileMenuVariants}
           >
-            {navLinks.map((link, index) => (
+            {/* {navLinks.map((link, index) => (
               <div key={index}>
                 {link.dropdown ? (
                   <>
@@ -187,7 +189,7 @@ const Navbar: React.FC = () => {
                   </Link>
                 )}
               </div>
-            ))}
+            ))} */}
           </motion.div>
         )}
       </AnimatePresence>

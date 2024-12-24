@@ -1,57 +1,77 @@
-'use client';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+"use client";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import Image from "next/image";
+import Slide1 from '../public/images/Slide1.jpg';
+import Slide2 from '../public/images/Slide2.jpg';
+import Slide3 from '../public/images/Slide3.jpg';
+const slidesData = [
+  {
+    title: "Transforming Ideas into Innovative Solutions",
+    description: "Empowering businesses with cutting-edge solutions that drive growth and success. We blend creativity with expertise to turn visionary ideas into tangible results",
+    button1Label: "Discover Now",
+    button2Label: "Learn more",
+    imageUrl: Slide1,
+  },
+  {
+    title: "Transforming Ideas into Innovative Solutions",
+    description: "Empowering businesses with cutting-edge solutions that drive growth and success. We blend creativity with expertise to turn visionary ideas into tangible results",
+    button1Label: "Discover Now",
+    button2Label: "Learn more",
+    imageUrl: Slide2,
+  },
+  {
+    title: "Transforming Ideas into Innovative Solutions",
+    description: "Empowering businesses with cutting-edge solutions that drive growth and success. We blend creativity with expertise to turn visionary ideas into tangible results",
+    button1Label: "Discover Now",
+    button2Label: "Learn more",
+    imageUrl: Slide3,
+  },
+];
 
 const HeroSection = () => {
   return (
-      <section className="flex flex-col gap-4 md:gap-8 lg:gap-12 md:flex-row justify-center items-center dark:bg-surface-color bg-on-surface-color text-on-surface-color mx-4 md:mx-8 lg:max-w-[960px] lg:mx-auto xl:mx-32 xl:max-w-full 2xl:max-w-[1296px] 2xl:mx-auto">
-        {/* Content on the left side */}
-        <div className="w-full md:w-1/2 text-center md:text-left flex flex-col items-center justify-center md:items-start">
-          <motion.h1
-            className="text-center md:text-left mobile-display-medium md:tablet-display-large xl:desktop-heading-one font-bold dark:text-primary text-on-primary"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            Transforming <span className='bg-primary-container text-primary rounded-full px-4 mobile-display-small md:tablet-display-medium xl:desktop-heading-two uppercase'>Ideas</span > into Innovative <span className='bg-primary-container text-primary rounded-full px-4 mobile-display-small md:tablet-display-medium xl:desktop-heading-two uppercase'>Solutions</span>
-          </motion.h1>
-          <motion.p
-            className="mt-4 mobile-body-large md:tablet-body-large xl:desktop-body-one dark:text-secondary-container text-primary-container p-4 w-fit "
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            Your Partner in Software Excellence
-          </motion.p>
-          <motion.div
-            className="mt-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.7 }}
-          >
-            <p className="mobile-body-medium md:tablet-body-medium xl:desktop-body-two text-surface-color dark:text-on-surface-color">
-              We deliver tailored software solutions, professional training, and expert guidance to help you thrive in the digital world.
-            </p>
-          </motion.div>
-        </div>
-
-        {/* Slider on the right side */}
-        <div className="flex items-center justify-center">
-          <motion.div
-            className="rounded-lg aspect-goldenRatio"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-          >
-            <Image
-              className='hidden  md:block'
-              src="/images/thinkfeat hero image.png"
-              alt="icon"
-              layout="fit"
-              width={2765}
-              height={1743} />
-          </motion.div>
-        </div>
+      <section className=" dark:bg-surface-color bg-on-surface-color text-on-surface-color w-full h-screen">
+       <div className="">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        // navigation
+        // pagination={{ clickable: true }}
+        autoplay={{ delay: 2000 }}
+        loop={true}
+        effect="fade"
+        speed={2000}
+        className="w-full h-screen"
+      >
+        {slidesData.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="relative flex items-center justify-center h-full text-white">
+              <Image
+                src={slide.imageUrl}
+                alt={`Slide ${index + 1}`}
+                className="object-cover w-full h-full"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center xl:justify-end xl:items-start xl:text-left xl:p-16 ">
+                <h1 className="mobile-display-medium lg:desktop-heading-one xl:max-w-xl">{slide.title}</h1>
+                <p className="mobile-body-large xl:max-w-xl mb-3">{slide.description}</p>
+                <div className="flex gap-4">
+                  <button className="bg-secondary text-white dark:bg-primary dark:text-secondary font-semibold py-2 px-6 rounded-lg transition">
+                    {slide.button1Label}
+                  </button>
+                  <button className="bg-primary text-secondary dark:bg-secondary dark:text-primary font-semibold py-2 px-6 rounded-lg">
+                    {slide.button2Label}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
 
       </section>
 
