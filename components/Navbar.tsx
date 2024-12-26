@@ -24,11 +24,11 @@ const Navbar: React.FC = () => {
     { title: 'Courses', url: '#coursesection' },
     {
       title: 'Services', url: '#servicessection'
-      // , dropdown: [
-      //   { title: 'Website Development', url: '#' },
-      //   { title: 'Mobile Application', url: '#' },
-      //   { title: 'digital Marketing', url: '#' },
-      // ]
+      , dropdown: [
+        { title: 'Website Development', url: '#' },
+        { title: 'Mobile Application', url: '#' },
+        { title: 'digital Marketing', url: '#' },
+      ]
     },
     { title: 'About', url: '#aboutsection' },
     { title: 'Contact', url: '/contact' },
@@ -114,7 +114,7 @@ const Navbar: React.FC = () => {
             exit="closed"
             variants={mobileMenuVariants}
           >
-            {/* {navLinks.map((link, index) => (
+            {navLinks.map((link, index) => (
               <div key={index}>
                 {link.dropdown ? (
                   <>
@@ -189,7 +189,7 @@ const Navbar: React.FC = () => {
                   </Link>
                 )}
               </div>
-            ))} */}
+            ))}
           </motion.div>
         )}
       </AnimatePresence>

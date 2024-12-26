@@ -1,59 +1,54 @@
-"use client";
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+'use client';
 
-const cards = [
-  {
-    
-    courseTitle: "Web Development",
-    description:
-      "Are you ready to unlock the full potential of modern web development? ThinkFeat Software Solutions",
-    image: "/images/DesigCard.jpg",
-    btnViewDetail: "View Detail",
-    btnApplyNow: "Apply Now",
-  },
-  {
-   
-    courseTitle: "Mobile Application",
-    description:
-      "Transform your ideas into innovative mobile apps with ThinkFeat Software Solutions’ Mobile Application...",
-    image: "/images/GraphicCard.jpg",
-    btnViewDetail: "View Detail",
-    btnApplyNow: "Apply Now",
-  },
-  {
-      courseTitle: "Digital Markeeting",
-    description:
-      "Are you ready to kickstart your career in digital marketing? ThinkFeat Software Solutions...",
+import React, { useState } from "react";
 
-    image: "/images/BusinessCard.jpg",
-    btnViewDetail: "View Detail",
-    btnApplyNow: "Apply Now",
+type CardData = {
+  id: number;
+  imageUrl: string;
+  title: string;
+  description: string;
+};
+
+const cardData: CardData[] = [
+  {
+    id: 1,
+    imageUrl: '/images/Blog1.jpg',
+    title: 'Python',
+    description: 'Dive into the world of programming with ThinkFeat Software Solutions Python for Everyone',
   },
   {
-   
-    courseTitle: "Cybersecurity",
-    description:
-      "Are you ready to step into the high-demand world of cybersecurity? ThinkFeat Software Solutions...",
-    image: "/images/TechnologyCard.jpg",
-    btnViewDetail: "View Detail",
-    btnApplyNow: "Apply Now",
+    id: 2,
+    imageUrl: '/images/Blog1.jpg',
+    title: 'Cybersecurity',
+    description: 'Are you ready to step into the high-demand world of cybersecurity? ThinkFeat Software Solutions...',
   },
   {
-    courseTitle: "Python",
-    description:
-      "Dive into the world of programming with ThinkFeat Software Solutions' Python for Everyone...",
-    image: "/images/TechnologyCard.jpg",
-    btnViewDetail: "View Detail",
-    btnApplyNow: "Apply Now",
+    id: 3,
+    imageUrl: '/images/Blog1.jpg',
+    title: 'Web Development',
+    description: 'Are you ready to unlock the full potential of modern web development? ThinkFeat Software Solutions...',
+  },
+  {
+    id: 4,
+    imageUrl: '/images/Blog1.jpg',
+    title: 'Digital Marketing',
+    description: 'Are you ready to kickstart your career in digital marketing? ThinkFeat Software Solutions...',
+  },
+  {
+    id: 5,
+    imageUrl: '/images/Blog1.jpg',
+    title: 'Block Chain',
+    description: 'Are you ready to step into the high-demand world of cybersecurity? ThinkFeat Software Solutions ',
   },
 ];
 
-const Courses = () => {
+const Card = () => {
+  const [visibleCards, setVisibleCards] = useState(3);
+
+  const handleShowMore = () => {
+    setVisibleCards(cardData.length); // Show all cards
+  };
+
   return (
     <section id="coursesection" className="w-full px-4 py-8">
       <div className="text-center my-8">
@@ -66,100 +61,50 @@ const Courses = () => {
         <h2 className="text-3xl font-bold text-on-primary dark:text-white">Popular Courses</h2>
       </div>
 
-     
-      <div className="flex flex-col lg:flex-row  gap-3  justify-center">
-  {cards.map((card, cardIndex) => (
-    <div
-      key={cardIndex}
-      className="w-full md:w-1/3 lg:w-1/4 bg-primary-container shadow-md rounded-lg overflow-hidden items-center p-2"
-    >
-      {/* Image Section */}
-      <img
-        src={card.image}
-        alt={card.courseTitle}
-        className="w-full h-40 object-cover rounded-lg"
-      />
-      {/* Text Section */}
-      <div className="p-4">
-        {/* Icon */}
-        
-        {/* Course Title */}
-        <h3 className="text-lg font-bold dark:text-primary text-secondary mb-2">
-          {card.courseTitle}
-        </h3>
-        {/* Description */}
-        <p className="text-gray-600 text-sm mb-4">{card.description}</p>
-        {/* Button */}
-        <div className="flex justify-end gap-1">
-        <button className="border border-indigo-600 text-black px-4 py-2 rounded hover: transition">
-          {card.btnViewDetail}
-        </button>
-        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
-          {card.btnApplyNow}
-        </button>
-        </div>
-      </div>
-    </div>
-  ))}
-</div>
-
-
-       
-    
-
-      {/* <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        spaceBetween={20}
-        slidesPerView={1}
-        speed={2000}
-        loop={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        breakpoints={{
-          640: { slidesPerView: 1 }, 
-          768: { slidesPerView: 2 }, 
-          1024: { slidesPerView: 3 }, 
-        }} */}
-      {/* // navigation
-      // pagination={{ clickable: true }}
-      > */}
-        {/* {cards.map((card, index) => (
-          <SwiperSlide key={index}>
-            <div className="dark:bg-primary bg-primary-container shadow-l rounded-2xl">
-              {/* Image Section */}
-              {/* <div className="max-w-sm mx-auto overflow-hidden justify-center">
+      <div className="py-12">
+        <div className="flex flex-wrap gap-4 justify-center  gap-y-28">
+          {/* Display only the visible cards */}
+          {cardData.slice(0, visibleCards).map((card) => (
+            <div
+              key={card.id}
+              className="relative bg-[#E0E0E0] dark:bg-[#0D0D0D] rounded-lg shadow-sm shadow-primary pt-16 w-80 h-auto"
+            >
+              {/* Elevated Image */}
+              <div className="absolute -top-5 left-[18%] transform -translate-y-[1px]">
                 <img
-                  src={card.image}
-                  alt={card.courseTitle}
-                  className="rounded-lg object-cover transition-transform duration-500 group-hover:scale-105 h-60 w-full"
+                  src={card.imageUrl}
+                  alt={card.title}
+                  className="w-full h-32 object-cover rounded-lg shadow-lg"
                 />
-              </div> */}
-
-
-
-              {/* Text Section */}
-              {/* <div className="p-4">
-                <h3 className="mobile-headline-small dark:text-secondary text-primary mb-2">{card.courseTitle}</h3>
-                <p className="dark:text-on-primary mobile-title-medium">{card.description}</p>
-                <div className="flex justify-end gap-0">
-                  <button
-                    className=" dark:hover:bg-on-primary hover:bg-black px-4 py-2 m-3 rounded-md border dark:border-black  dark:text-secondary transition btn-primary group-hover:transition-all duration-300">
-                    View Detail
-                  </button> */}
-                  {/* <button
-                    className="bg-secondary px-4 py-2 m-3 rounded transition btn-primary group-hover:transition-all duration-300">
-                    Apply Now
-                  </button>
-                </div>
               </div>
+              {/* Title and Description */}
+              <div className="p-4 mt-8 text-center">
+                <h3 className="text-lg font-bold text-secondary dark:text-primary">{card.title}</h3>
+                <p className="text-sm text-on-primary dark:text-white mt-2 leading-relaxed">{card.description}</p>
+                <div className="flex justify-center gap-4 mt-4">
+                <button className="border border-secondary text-on-primary p-2 rounded-md hover:bg-on-primary hover:text-white dark:text-white transition-all duration-700">View Detail</button>
+                <button className="bg-secondary text-white p-2 rounded-md">Apply Now</button>
+              </div>
+              </div>
+              
             </div>
-          </SwiperSlide> */}
-        {/* ))}
-      </Swiper>} */}
+          ))}
+        </div>
+
+        {/* Show More Button */}
+        {visibleCards < cardData.length && (
+          <div className="text-center mt-6">
+            <button
+              onClick={handleShowMore}
+              className="px-6 py-2 bg-secondary dark:text-primary text-primary rounded-full"
+            >
+              Show More
+            </button>
+          </div>
+        )}
+      </div>
     </section>
   );
 };
 
-export default Courses;
+export default Card;

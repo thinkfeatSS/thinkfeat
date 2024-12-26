@@ -34,7 +34,7 @@ const Choose = () => {
           {choose.map((content, index) => (
             <div key={index} className="mb-8">
                 <div className="flex items-center gap-4 px-2">
-              {content.icon && <content.icon className="text-orange-500" />}
+              {content.icon && <content.icon className="text-white" />}
               <h3 className="mobile-title-medium xl:desktop-heading-five dark:text-primary">
                 {content.head}
               </h3>

@@ -16,37 +16,73 @@ const ourTeam = [
 
 const imageSources = [
   {
-    src: "/images/team-1.jpg",
+    src: "/images/Rizwan.jpg",
     alt: "Image 1",
-    header: "Title Goes here",
-    caption: "CEO, Founder, ...",
+    header: "Rizwan Ahmed",
+    caption: "Senior Software Engineer",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     btn: "Learn more -->",
   },
   {
-    src: "/images/team-2.jpg",
+    src: "/images/Ahsan.jpg",
+    alt: "Image 1",
+    header: "Muhammad Ahsan",
+    caption: "Data Scientist/ML Engineer",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    btn: "Learn more -->",
+  },
+  {
+    src: "/images/Anees.webp",
+    alt: "Image 1",
+    header: "Anees Mehdi",
+    caption: "Director Markeeting & Network",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    btn: "Learn more -->",
+  },
+  {
+    src: "/images/Manhal.jpg",
     alt: "Image 2",
-    header: "Title Goes here",
-    caption: "CEO, Founder, ...",
+    header: "Minhal Mahar",
+    caption: "Director Sales",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     btn: "Learn more -->",
   },
   {
-    src: "/images/team-3.jpg",
+    src: "/images/Abdullah.jpg",
     alt: "Image 3",
-    header: "Title Goes here",
-    caption: "CEO, Founder, ...",
+    header: "Abdullah Shaikh",
+    caption: "Junior Software Engineer",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     btn: "Learn more -->",
   },
   {
-    src: "/images/team-4.jpg",
+    src: "/images/Akber.jpg",
     alt: "Image 4",
-    header: "Title Goes here",
-    caption: "CEO, Founder, ...",
+    header: "Akber Baloch",
+    caption: "Fronted Developer",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    btn: "Learn more -->",
+  },
+  {
+    src: "/images/Irfan.jpg",
+    alt: "Image 4",
+    header: "Irfan Ali",
+    caption: "Managing Director",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    btn: "Learn more -->",
+  },
+  {
+    src: "/images/younis.jpg",
+    alt: "Image 4",
+    header: "Muhammad Younis",
+    caption: "Fronted Developer",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     btn: "Learn more -->",
@@ -94,10 +130,10 @@ const Team: React.FC = () => {
                 alt={image.alt}
                 className="w-full h-auto object-cover"
               />
-              <div className="p-4">
+              <div className="p-4 bg-[#E0E0E0]">
                 <h3 className="text-xl font-semibold text-black dark:text-white">{image.header}</h3>
-                <p className="text-sm text-gray-600">{image.caption}</p>
-                <p className="text-sm text-gray-500">{image.description}</p>
+                <p className="text-sm dark:text-primary text-secondary">{image.caption}</p>
+                <p className="text-sm text-white">{image.description}</p>
                 <div className="flex  mt-4">
                   <button className="text-black rounded-md">{image.btn}</button>
                 </div>
