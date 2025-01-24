@@ -67,7 +67,7 @@ const Card = () => {
   };
 
   return (
-    <section id="coursesection" className="w-full px-4 py-8">
+    <section id="coursesection" className="w-full px-4 py-16">
       <div className="text-center my-8">
         {/* Subheading */}
 
