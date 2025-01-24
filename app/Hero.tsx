@@ -12,6 +12,7 @@ import Slide3 from '../public/images/Slide3.jpg';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCaretDown} from '@fortawesome/free-solid-svg-icons';
+import { MdOutlineExpandMore } from "react-icons/md";
 
 const slidesData = [
   {
@@ -71,7 +72,7 @@ const HeroSection = () => {
 
                   <button className="bg-primary text-secondary dark:bg-secondary dark:text-primary font-semibold py-2 px-6 rounded-lg flex items-center gap-2">
                     {slide.button2Label}
-                    <FontAwesomeIcon icon={faCaretDown} className="text-[22px]"/>
+                     <MdOutlineExpandMore className="text-[28px]" />
                   </button>
                 </div>
               </div>
