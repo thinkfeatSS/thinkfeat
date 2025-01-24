@@ -9,6 +9,10 @@ import Image from "next/image";
 import Slide1 from '../public/images/Slide1.jpg';
 import Slide2 from '../public/images/Slide2.jpg';
 import Slide3 from '../public/images/Slide3.jpg';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faCaretDown} from '@fortawesome/free-solid-svg-icons';
+
 const slidesData = [
   {
     title: "Transforming Ideas into Innovative Solutions",
@@ -59,11 +63,15 @@ const HeroSection = () => {
                 <h1 className="mobile-display-medium lg:desktop-heading-one xl:max-w-xl">{slide.title}</h1>
                 <p className="mobile-body-large xl:max-w-xl mb-3">{slide.description}</p>
                 <div className="flex gap-4">
+
                   <button className="bg-secondary text-white dark:bg-primary dark:text-secondary font-semibold py-2 px-6 rounded-lg transition">
                     {slide.button1Label}
+                   
                   </button>
-                  <button className="bg-primary text-secondary dark:bg-secondary dark:text-primary font-semibold py-2 px-6 rounded-lg">
+
+                  <button className="bg-primary text-secondary dark:bg-secondary dark:text-primary font-semibold py-2 px-6 rounded-lg flex items-center gap-2">
                     {slide.button2Label}
+                    <FontAwesomeIcon icon={faCaretDown} className="text-[22px]"/>
                   </button>
                 </div>
               </div>
