@@ -57,7 +57,7 @@ const HeroSection = () => {
               <Image
                 src={slide.imageUrl}
                 alt={`Slide ${index + 1}`}
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full "
               />
               <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center xl:justify-end xl:items-start xl:text-left xl:p-16 ">
                 <h1 className="mobile-display-medium lg:desktop-heading-one xl:max-w-xl">{slide.title}</h1>

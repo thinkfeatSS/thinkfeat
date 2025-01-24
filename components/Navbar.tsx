@@ -90,7 +90,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="z-[499] fixed top-0 left-0 flex justify-evenly items-center w-screen shadow-md bg-on-surface-color dark:bg-black px-4 md:px-8 py-1">
+      <nav className="z-[499] fixed top-0 left-0 flex justify-evenly items-center w-screen shadow-md bg-on-surface-color dark:bg-black px-4 md:px-8 py-2">
         <div className='flex items-center justify-between w-full 2xl:w-[1296px]'>
           <Logo />
           <div className='hidden lg:flex'>
