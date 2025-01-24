@@ -15,7 +15,7 @@ const aboutData = {
     { label: "Consultancy", value: 70 },
   ],
   images: [
-    { src: "/images/pics1.jpg", alt: "Team 1", className: "rounded-lg" },
+   
     { src: "/images/about2.jpg", alt: "Team 2", className: "rounded-lg" },
     { src: "/images/about3.jpg", alt: "Team 3", className: "rounded-lg" },
     { src: "/images/about3.jpg", alt: "Team 4", className: "rounded-lg" },
@@ -28,8 +28,8 @@ const About = () => {
 
       <h2 className="text-4xl py-12 font-bold text-on-primary dark:text-white text-center">About Us</h2>
       
-        <div className="flex flex-col md:flex-row gap-12 ">
-          <div className="grid grid-cols-4 gap-4">
+        <div className="flex flex-col md:flex-row gap-12">
+          <div className="grid grid-cols-3 gap-4">
             {aboutData.images.map((image, index) => (
               <Image
                 key={index}

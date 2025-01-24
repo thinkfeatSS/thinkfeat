@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import OurTeam from "./Courses";
 import Courses from "./Courses";
 import Team from "./Team";
+import Contact from "./contact/Contact";
 
 
 
@@ -24,6 +25,7 @@ export default function Home() {
         {/* <Choose/> */}
         <OurServices/>
         <Team/>
+        <Contact/>
         <Footer/>
 
         
