@@ -1,17 +1,18 @@
-import React from 'react';
+ "use client";
+
+import React from "react";
 import { CiFacebook } from "react-icons/ci";
-import { FaGooglePlusG } from "react-icons/fa6";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaRss } from "react-icons/fa";
+import { FaGooglePlusG, FaRss, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import Logo from "./Logo";
+
 const foot = [
   {
     logo: "./icon.png",
     title: "THINKFEAT",
-    caption: "There are many variations of Lorem Ipsum available, but the majority have suffered alteration. We are privileged to work with",
-    faceicon: <CiFacebook className='dark:hover:text-primary'/>,
-    googleicon: <FaGooglePlusG className='dark:hover:text-primary'/>,
-    twittericon: <FaXTwitter className='dark:hover:text-primary'/>,
-    laanicon: <FaRss className='dark:hover:text-primary'/>,
+    caption:
+      "There are many variations of Lorem Ipsum available, but the majority have suffered alteration. We are privileged to work with",
+    faceicon: <CiFacebook className="dark:hover:text-primary text-[30px]" />,
+    googleicon: <FaGooglePlusG className="dark:hover:text-primary text-[30px]" />,
   },
   {
     title: "QUICK LINKS",
@@ -23,43 +24,54 @@ const foot = [
   },
   {
     title: "OUR CONTACTS",
-    address: "Address: Hyderabad Qasimabad Phase 2 Jatoi Chownk",
-    phone: "Phone:03342673135",
-    email: "thinkfeat@gamil.com"
+    address: "Hyderabad Qasimabad Phase 2 Jatoi Chownk",
+    phone: "03342673135",
+    email: "thinkfeat@gamil.com",
   },
 ];
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
-    <div className='dark:bg-[#0D0D0D] bg-[#E0E0E0] dark:text-on-surface-color w-full h-full gap-x-4 lg:gap-x-0 lg:flex text-gray-600 shadow-lg dark:shadow-white shadow-slate-800'>
-      {foot.map((item, index) => (
-        <div key={index} className='text-secondary footer-column justify-between px-12'>
-          <div className='flex items-center gap-2 mt-8'>
-            {item.logo && <img src={item.logo} alt="Logo" className="w-8 h-8 mt-4" />}
-            <h3 className='mobile-title-large mt-4'>{item.title}</h3>
-          </div>
-          <div className='cursor-pointer'>
-            {item.caption && <p className='text-justify max-w-lg'>{item.caption}</p>}
-            {(item.faceicon || item.googleicon || item.twittericon || item.laanicon) && (
-              <div className='flex gap-4 mt-2 text-3xl'>
-                {item.faceicon}
-                {item.googleicon}
-                {item.twittericon}
-                {item.laanicon}
-              </div>
-            )}
-            {item.address && <p className=''>{item.address}</p>}
-            {item.phone && <p>{item.phone}</p>}
-            {item.email && <p>{item.email}</p>}
-            {item.service && <p className='dark:hover:text-primary'>{item.service}</p>}
-            {item.choose && <p className='dark:hover:text-primary'>{item.choose}</p>}
-            {item.company && <p className='dark:hover:text-primary'>{item.company}</p>}
-            {item.business && <p className='dark:hover:text-primary'>{item.business}</p>}
-            {item.work && <p>{item.work}</p>}
-          </div>
+    <footer className="bg-on-surface-color text-black py-8 border border-t-gray-300 shadow-lg">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Section 1: Logo and Caption */}
+         
+       <Logo/>
+       
+        
+
+        {/* Section 2: Quick Links */}
+        <div className="flex flex-col items-center text-secondary">
+          <h3 className="text-2xl font-semibold mb-4">{foot[1].title}</h3>
+          <ul className="space-y-2">
+            <li>{foot[1].service}</li>
+            <li>{foot[1].choose}</li>
+            <li>{foot[1].company}</li>
+            <li>{foot[1].business}</li>
+            <li>{foot[1].work}</li>
+          </ul>
         </div>
-      ))}
-    </div>
+
+        {/* Section 3: Contact Information */}
+        <div className="flex flex-col items-center text-secondary">
+          <h3 className="text-3xl font-semibold mb-4">{foot[2].title}</h3>
+          <ul className="space-y-2">
+            <li className="flex items-center">
+              <FaMapMarkerAlt className="mr-2 text-xl" />
+              {foot[2].address}
+            </li>
+            <li className="flex items-center">
+              <FaPhoneAlt className="mr-2 text-xl" />
+              {foot[2].phone}
+            </li>
+            <li className="flex items-center">
+              <FaEnvelope className="mr-2 text-xl" />
+              {foot[2].email}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   );
 };
 
