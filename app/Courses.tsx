@@ -8,6 +8,7 @@ import { MdDisplaySettings } from "react-icons/md";
 import { FaCartArrowDown } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { SiBnbchain } from "react-icons/si";
+import { MdOutlineExpandMore } from "react-icons/md";
 
 
 type CardData = {
@@ -112,9 +113,10 @@ const Card = () => {
           <div className="text-center mt-6">
             <button
               onClick={handleShowMore}
-              className="px-6 py-2 bg-secondary dark:text-primary text-primary rounded-full"
+              className="p-4  text-secondary dark:text-primary  rounded-full flex mx-auto items-center gap-1 font-semibold"
             >
-              Show More
+              Show more
+              <MdOutlineExpandMore className="text-[28px]" />
             </button>
           </div>
         )}
