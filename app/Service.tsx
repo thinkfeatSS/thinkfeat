@@ -37,7 +37,7 @@ const Service = () => {
         {cardData.map((card, index) => (
           <div
             key={index}
-            className=" bg-on-surface-color dark:bg-surface-color dark:text-on-surface-color   p-6 border border-gray-200 shadow-md rounded-lg w-full h-64 text-center dark:shadow-secondary hover:bg-stone-50"
+            className=" bg-[#E0E0E0] dark:bg-surface-color dark:text-on-surface-color   p-6 border border-gray-200 shadow-md rounded-lg w-full h-64 text-center dark:shadow-secondary hover:bg-stone"
           >
             <h1 className=" text-5xl font-semibold mb-2 text-secondary dark:text-primary">
               {card.icon}
