@@ -4,7 +4,7 @@ import React from 'react'
 const Logo = () => {
   return (
     <div className='flex items-center justify-center gap-2 '>
-      <Image src="/images/thinkfeat icon.png" alt="not found" width={900} height={900} className='w-12 md:w-[80px]'/>
+      <Image src="/images/thinkfeat icon.png" alt="not found" width={900} height={900} className='w-12 md:w-[70px]'/>
 
 
       <div className='flex flex-col  justify-center'>

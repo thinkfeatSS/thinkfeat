@@ -107,7 +107,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ navLinks }) => {
                                             <Link
                                                 key={subIndex}
                                                 href={sublink.url}
-                                                className="block  px-4 py-2 hover:bg-primary hover:text-on-primary dark:hover:bg-secondary dark:hover:text-on-secondary transition-all ease-linear text-base md:text-lg first:rounded-t-lg last:rounded-b-lg"
+                                                className="block px-4 py-2 hover:bg-primary hover:text-on-primary dark:hover:bg-secondary dark:hover:text-on-secondary transition-all ease-linear text-base  first:rounded-t-lg last:rounded-b-lg"
                                             >
                                                 {sublink.title}
                                             </Link>
