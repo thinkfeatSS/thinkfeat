@@ -53,12 +53,14 @@ const Card = () => {
     <section id="coursesection" className="w-full px-4 py-8">
       <div className="text-center my-8">
         {/* Subheading */}
-        <h4 className="text-sm text-secondary dark:text-primary mb-1 flex items-center justify-center">
+
+        {/* <h4 className="text-sm text-secondary dark:text-primary mb-1 flex items-center justify-center">
           Courses
           <span className="w-10 h-[1px] bg-on-primary dark:bg-primary ml-2"></span>
-        </h4>
+        </h4> */}
+
         {/* Heading */}
-        <h2 className="text-3xl font-bold text-on-primary dark:text-white">Popular Courses</h2>
+        <h2 className="text-4xl font-bold text-on-primary dark:text-white text-center">Our Courses</h2>
       </div>
 
       <div className="py-12">
@@ -82,8 +84,8 @@ const Card = () => {
                 <h3 className="text-lg font-bold text-secondary dark:text-primary">{card.title}</h3>
                 <p className="text-sm text-on-primary dark:text-white mt-2 leading-relaxed">{card.description}</p>
                 <div className="flex justify-center gap-4 mt-4">
-                <button className="border border-secondary text-on-primary p-2 rounded-md hover:bg-on-primary hover:text-white dark:text-white transition-all duration-700">View Detail</button>
-                <button className="bg-secondary text-white p-2 rounded-md">Apply Now</button>
+                <button className=" text-[12px] px-4  border border-secondary text-on-primary p-2 rounded-md hover:bg-on-primary hover:text-white dark:text-white transition-all duration-700">View Detail</button>
+                <button className="bg-secondary text-white text-[12px] px-4 rounded-md">Apply Now</button>
               </div>
               </div>
               

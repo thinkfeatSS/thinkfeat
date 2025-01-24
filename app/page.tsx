@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "./Hero";
-import Card from "./Card";
+import Card from "./Service";
 import About from "./About";
 import Services from "./Services";
 import Choose from "./Choose";
@@ -20,7 +20,7 @@ export default function Home() {
         <Card/>
         <Courses/>
         <About/>
-        <Services/>
+        {/* <Services/> */}
         <Choose/>
         <OurServices/>
         <Team/>
