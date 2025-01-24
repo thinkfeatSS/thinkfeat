@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "./Hero";
-import Card from "./Service";
+import Service from "./Service";
 import About from "./About";
 import Services from "./Services";
 import Choose from "./Choose";
@@ -17,11 +17,11 @@ export default function Home() {
     <main className="relative">
       <div className="html dark:bg-surface-color bg-on-surface-color text-on-surface-color">
         <Hero />
-        <Card/>
+        <Service/>
         <Courses/>
         <About/>
         {/* <Services/> */}
-        <Choose/>
+        {/* <Choose/> */}
         <OurServices/>
         <Team/>
         <Footer/>
