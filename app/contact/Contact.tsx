@@ -39,10 +39,10 @@ const Contact = () => {
   return (
     <div id='contact' className='w-full px-[12%] py-10 bg-bg-footer bg-no-repeat bg-center bg-[length:90%_auto]'>
      
-      <h2 className='text-center text-4xl font-bold text-black mt-4 mb-8 md:mb-12'>
+      <h2 className='text-center text-4xl font-bold text-black mt-4 mb-8 md:mb-12 dark:text-white'>
         Get In Touch
       </h2>
-      <p className='text-center text-black max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
+      <p className='text-center text-black max-w-2xl mx-auto mt-5 mb-12 font-Ovo dark:text-white'>
         Let’s connect and discuss how we can work together or help you achieve your goals. Drop us a message, and we’ll get back to you as soon as possible!
       </p>
 

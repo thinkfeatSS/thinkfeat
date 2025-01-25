@@ -27,35 +27,35 @@ const cardData: CardData[] = [
     imageUrl: '/images/Blog1.jpg',
     title: 'Python',
     description: 'Dive into the world of programming with ThinkFeat Software Solutions Python for Everyone',
-    icon: <FaPython  className="text-secondary w-16 text-[60px] text-center"/>
+    icon: <FaPython  className="text-secondary w-16 text-[60px] text-center dark:text-primary"/>
   },
   {
     id: 2,
     imageUrl: '/images/Blog1.jpg',
     title: 'Cybersecurity',
     description: 'Are you ready to step into the high-demand world of cybersecurity? ThinkFeat Software Solutions...',
-    icon: <GiCyberEye  className="text-secondary w-16 text-[60px] text-center"/>
+    icon: <GiCyberEye  className="text-secondary w-16 text-[60px] text-center dark:text-primary"/>
   },
   {
     id: 3,
     imageUrl: '/images/Blog1.jpg',
     title: 'Web Development',
     description: 'Are you ready to unlock the full potential of modern web development? ThinkFeat Software Solutions...',
-    icon: <MdDisplaySettings  className="text-secondary w-16 text-[60px] text-center"/>
+    icon: <MdDisplaySettings  className="text-secondary w-16 text-[60px] text-center dark:text-primary"/>
   },
   {
     id: 4,
     imageUrl: '/images/Blog1.jpg',
     title: 'Digital Marketing',
     description: 'Are you ready to kickstart your career in digital marketing? ThinkFeat Software Solutions...',
-    icon: <FaCartArrowDown  className="text-secondary w-16 text-[60px] text-center"/>
+    icon: <FaCartArrowDown  className="text-secondary w-16 text-[60px] text-center dark:text-primary"/>
   },
   {
     id: 5,
     imageUrl: '/images/Blog1.jpg',
     title: 'Block Chain',
     description: 'Are you ready to step into the high-demand world of cybersecurity? ThinkFeat Software Solutions ',
-    icon: <SiBnbchain  className="text-secondary w-16 text-[60px] text-center"/>
+    icon: <SiBnbchain  className="text-secondary w-16 text-[60px] text-center dark:text-primary"/>
   },
 ];
 
@@ -98,7 +98,7 @@ const Card = () => {
                 <p className="text-sm text-on-primary dark:text-white mt-2 leading-relaxed h-28">{card.description}</p>
                 <div className="flex justify-center gap-4 mt-4">
                 {/* <button className=" text-[12px] px-4  border border-secondary text-on-primary p-2 rounded-md hover:bg-on-primary hover:text-white dark:text-white transition-all duration-700">View Detail</button> */}
-                <button className="bg-secondary text-white text-[12px] px-4 py-2 rounded-md flex items-center gap-2">Apply Now
+                <button className="bg-secondary text-white text-[12px] px-4 py-2 rounded-md flex items-center gap-2 dark:bg-primary dark:text-black">Apply Now
                 <FaArrowRight />
                 </button>
               </div>

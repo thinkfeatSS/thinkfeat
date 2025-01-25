@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
       ]
     },
     { title: 'About', url: '#aboutsection' },
-    { title: 'Contact', url: '/contact' },
+    { title: 'Contact', url: '#contact' },
   ];
 
   const toggleDropdown = (index: number) => {

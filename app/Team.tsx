@@ -57,7 +57,7 @@ const Team: React.FC = () => {
       <h2 className="text-4xl py-12 font-bold text-on-primary dark:text-white text-center">
         Our Team
       </h2>
-      <p className="text-center text-lg text-black mb-8">
+      <p className="text-center text-lg text-black mb-8 dark:text-white">
         {ourTeam[0].caption}
       </p>
 

@@ -32,7 +32,7 @@ const foot = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-on-surface-color text-black py-8 border border-t-gray-300 shadow-lg">
+    <footer className="bg-on-surface-color text-black py-8 border border-t-gray-300 shadow-lg dark:bg-black dark:border-black">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Section 1: Logo and Caption */}
          
