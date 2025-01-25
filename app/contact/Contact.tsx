@@ -59,7 +59,7 @@ const Contact = () => {
 
         <button type='submit'
           className='py-3 px-8 w-max flex items-center justify-between gap-2 bg-gradient-to-r bg-secondary text-white rounded-full mx-auto 
-            hover:bg-black/80 duration-500'>
+            hover:bg-black/80 duration-500 dark:bg-primary dark:text-black'>
           Submit now  
         </button>
         <p className='mt-4'>{result}</p>

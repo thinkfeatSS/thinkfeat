@@ -32,7 +32,7 @@ const foot = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-on-surface-color text-black py-8 border border-t-gray-300 shadow-lg dark:bg-black dark:border-black">
+    <footer className="bg-on-surface-color text-black py-8 border border-t-gray-300 shadow-lg dark:bg-black dark:border-black ">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Section 1: Logo and Caption */}
          
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
         
 
         {/* Section 2: Quick Links */}
-        <div className="flex flex-col items-center text-secondary">
+        <div className="flex flex-col items-center text-secondary dark:text-primary">
           <h3 className="text-2xl font-semibold mb-4">{foot[1].title}</h3>
           <ul className="space-y-2">
             <li>{foot[1].service}</li>
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Section 3: Contact Information */}
-        <div className="flex flex-col items-center text-secondary">
+        <div className="flex flex-col items-center text-secondary dark:text-primary">
           <h3 className="text-3xl font-semibold mb-4">{foot[2].title}</h3>
           <ul className="space-y-2">
             <li className="flex items-center">

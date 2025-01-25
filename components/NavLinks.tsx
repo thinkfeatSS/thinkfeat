@@ -70,7 +70,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ navLinks }) => {
                         <>
                             <button
                                 onClick={() => toggleDropdown(index)}
-                                className="text-lg md:text-xl group transition-all ease-linear hover:text-secondary dark:hover:text-primary"
+                                className="text-lg md:text-xl group transition-all ease-linear  hover:text-secondary dark:hover:text-primary"
                             >
                                 <div className="flex gap-1">
                                     {link.title}
