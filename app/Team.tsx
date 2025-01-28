@@ -14,14 +14,21 @@ const ourTeam = [
 
 const imageSources = [
   {
-    src: "/images/Rizwan.jpg",
-    alt: "Image 1",
+    src: "/images/TEAM/IsmaelLM.jpg",
+    alt: "Image1",
+    header: "Muhammad Imsael",
+    caption: "Founder & CEO",
+
+  },
+  {
+    src: "/images/Team/RizwanLM.jpg",
+    alt: "Image2",
     header: "Rizwan Ahmed",
     caption: "Senior Software Engineer",
   },
   {
-    src: "/images/Ahsan.jpg",
-    alt: "Image 2",
+    src: "/images/Team/AhsanLm.jpg",
+    alt: "Image3",
     header: "Muhammad Ahsan",
     caption: "Data Scientist/ML Engineer",
   },
@@ -49,6 +56,13 @@ const imageSources = [
     header: "Akber Baloch",
     caption: "Frontend Developer",
   },
+  {
+    src: "/images/Team/IrfanLM.jpg",
+    alt: "Image8",
+    header: "Irfan Ali",
+    caption: "Head of HR",
+  },
+
 ];
 
 const Team: React.FC = () => {
