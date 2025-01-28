@@ -3,17 +3,19 @@ import Image from "next/image";
 
 
 const aboutData = {
-  sectionTitle: "Our About Us",
-  mainTitle: "More than To Provide IT Solutions 24+ Years Of Experience",
-  description:
-    "We are privileged to work with hundreds of future-think IT. It is a long-established fact that will...",
-  buttonLabel: "About More",
-  progressBars: [
-    { label: "Development", value: 90 },
-    { label: "Design", value: 85 },
-    { label: "Solution", value: 75 },
-    { label: "Consultancy", value: 70 },
-  ],
+
+  // sectionTitle: "Our About Us",
+  // mainTitle: "More than To Provide IT Solutions 24+ Years Of Experience",
+  // description:
+  //   "We are privileged to work with hundreds of future-think IT. It is a long-established fact that will...",
+  // buttonLabel: "About More",
+
+  // progressBars: [
+  //   { label: "Development", value: 90 },
+  //   { label: "Design", value: 85 },
+  //   { label: "Solution", value: 75 },
+  //   { label: "Consultancy", value: 70 },
+  // ],
   images: [
    
     { src: "/images/About/about2.jpg", alt: "Team 2", className: "rounded-lg" },
