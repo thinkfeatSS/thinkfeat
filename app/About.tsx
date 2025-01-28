@@ -16,9 +16,9 @@ const aboutData = {
   ],
   images: [
    
-    { src: "/images/about2.jpg", alt: "Team 2", className: "rounded-lg" },
-    { src: "/images/about3.jpg", alt: "Team 3", className: "rounded-lg" },
-    { src: "/images/about3.jpg", alt: "Team 4", className: "rounded-lg" },
+    { src: "/images/About/about2.jpg", alt: "Team 2", className: "rounded-lg" },
+    { src: "/images/About/about3.jpg", alt: "Team 3", className: "rounded-lg" },
+    { src: "/images/About/about3.jpg", alt: "Team 4", className: "rounded-lg" },
   ],
 };
 
