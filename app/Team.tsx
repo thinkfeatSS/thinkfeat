@@ -33,13 +33,13 @@ const imageSources = [
     caption: "Data Scientist/ML Engineer",
   },
   {
-    src: "/images/Anees.webp",
+    src: "/images/Team/AneesLM.jpg",
     alt: "Image 3",
     header: "Anees Mehdi",
     caption: "Director Marketing & Network",
   },
   {
-    src: "/images/Manhal.jpg",
+    src: "/images/Team/ManhalLM.jpg",
     alt: "Image 4",
     header: "Minhal Mahar",
     caption: "Director Sales",
