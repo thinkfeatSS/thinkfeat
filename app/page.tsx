@@ -6,10 +6,10 @@ import Services from "./Services";
 import Choose from "./Choose";
 import OurServices from "./OurProject";
 import Footer from "../components/Footer";
-import OurTeam from "./Courses";
 import Courses from "./Courses";
 import Team from "./Team";
 import Contact from "./contact/Contact";
+ 
 
 
 
@@ -20,6 +20,7 @@ export default function Home() {
         <Hero />
         <Service/>
         <Courses/>
+         
         <About/>
         {/* <Services/> */}
         {/* <Choose/> */}
