@@ -2,6 +2,7 @@ import React from "react";
 import { TfiSignal } from "react-icons/tfi";
 import { SiLeaderprice } from "react-icons/si";
 import { TbAugmentedReality } from "react-icons/tb";
+import { FaFileVideo } from "react-icons/fa6";
 import { div } from "framer-motion/client";
 
 const services = {
@@ -17,6 +18,8 @@ const services = {
   ],
   
 };
+
+ 
 
 const Services = () => {
   return (
