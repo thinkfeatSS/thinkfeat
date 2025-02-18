@@ -9,6 +9,9 @@ import Footer from "../components/Footer";
 import Courses from "./Courses";
 import Team from "./Team";
 import Contact from "./contact/Contact";
+import Hero2 from "./Hero2";
+
+
  
 
 
@@ -16,11 +19,11 @@ import Contact from "./contact/Contact";
 export default function Home() {
   return (
     <main className="relative">
-      <div className="html dark:bg-surface-color bg-on-surface-color text-on-surface-color">
-        <Hero />
+      <div className="html appear-animation dark:bg-surface-color bg-on-surface-color text-on-surface-color">
+        {/* <Hero /> */}
+        <Hero2/>
         <Service/>
-        <Courses/>
-         
+        <Courses/>   
         <About/>
         {/* <Services/> */}
         {/* <Choose/> */}

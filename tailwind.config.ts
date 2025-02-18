@@ -15,6 +15,7 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
       colors: {
+        "light": "#f7f7f7",
         "primary": "#FCF5A5",
         "on-primary": "#1C1A03", 
         "primary-container": "#4C4A33",
