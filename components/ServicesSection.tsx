@@ -85,7 +85,7 @@ export default function ServicesSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
           >
-            <span className="bg-gradient-to-r from-dark-primary to-yellow-300 bg-clip-text text-transparent">
+            <span className="">
               Our
             </span>
             <span className="text-dark-text dark:text-light-text"> Services</span>
