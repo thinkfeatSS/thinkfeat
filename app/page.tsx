@@ -1,51 +1,25 @@
-import Navbar from "@/components/Navbar";
-import Hero from "./Hero";
-import Service from "./Service";
-import About from "./About";
-import Services from "./Services";
-import Choose from "./Choose";
-import OurServices from "./OurProject";
-import Footer from "../components/Footer";
-import Courses from "./Courses";
-import Team from "./Team";
-import Contact from "./contact/Contact";
-import Hero2 from "./Hero2";
-
-
- 
-
-
+import ModernNavbar from "@/components/ModernNavbar";
+import Hero3D from "@/components/Hero3D";
+import AboutSection from "@/components/AboutSection";
+import ServicesSection from "@/components/ServicesSection";
+import TrainingSection from "@/components/TrainingSection";
+import PortfolioSection from "@/components/PortfolioSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import ContactSection from "@/components/ContactSection";
+import ModernFooter from "@/components/ModernFooter";
 
 export default function Home() {
   return (
     <main className="relative">
-      <div className="html appear-animation dark:bg-surface-color bg-on-surface-color text-on-surface-color">
-        {/* <Hero /> */}
-        <Hero2/>
-        <Service/>
-        <Courses/>   
-        <About/>
-        {/* <Services/> */}
-        {/* <Choose/> */}
-        <OurServices/>
-        <Team/>
-        <Contact/>
-        <Footer/>
-
-        
-      </div>
-      
-      {/* <div className="sticky top-0 h-[768px] flex flex-col items-center justify-center bg-indigo-600 text-white">
-        <OutTeam />
-      </div>
-      <div className="sticky top-0 h-[768px] flex flex-col items-center justify-center bg-purple-600 text-white">
-        <OutTeam />
-
-      </div>
-      <div className="sticky top-0 h-[768px] flex flex-col items-center justify-center bg-neutral-800 text-white">
-        <OutTeam />
-
-      </div> */}
+      <ModernNavbar />
+      <Hero3D />
+      <AboutSection />
+      <ServicesSection />
+      <TrainingSection />
+      <PortfolioSection />
+      <TestimonialsSection />
+      <ContactSection />
+      <ModernFooter />
     </main>
   );
 }
