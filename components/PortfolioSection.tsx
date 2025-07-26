@@ -85,12 +85,6 @@ const projects = [
 ];
 
 // Animation variants
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
-};
-
 const modalVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
@@ -168,7 +162,7 @@ export default function PortfolioSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
           >
-            <span className="">
+            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
               Our
             </span>
             <span className="text-gray-800 dark:text-gray-100"> Portfolio</span>
