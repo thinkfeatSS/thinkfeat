@@ -179,10 +179,8 @@ export default function TestimonialsSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
           >
-            <span className="">
-              What Our
-            </span>
-            <span className="text-gray-800 dark:text-gray-100"> Clients Say</span>
+
+            <span className="text-gray-800 dark:text-gray-100">What Our Clients Say</span>
           </motion.h2>
           
           <motion.p

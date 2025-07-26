@@ -85,10 +85,8 @@ export default function ServicesSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
           >
-            <span className="">
-              Our
-            </span>
-            <span className="text-dark-text dark:text-light-text"> Services</span>
+            
+            <span className="text-dark-text dark:text-light-text">Our Services</span>
           </motion.h2>
           
           <motion.p
