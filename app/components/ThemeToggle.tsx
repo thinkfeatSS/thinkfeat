@@ -8,20 +8,26 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     setMounted(true);
-    
-    // Check localStorage first, then system preference
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const savedTheme = localStorage.getItem('theme');
-    const isDarkMode = savedTheme === 'dark' || 
-      (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    
+    const prefersDark = mediaQuery.matches;
+    const isDarkMode = savedTheme === 'dark' || (!savedTheme && prefersDark);
+
     setIsDark(isDarkMode);
-    
-    // Apply the theme immediately
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.classList.toggle('dark', isDarkMode);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      const storedTheme = localStorage.getItem('theme');
+      if (!storedTheme) {
+        setIsDark(e.matches);
+        document.documentElement.classList.toggle('dark', e.matches);
+      }
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
   const toggleTheme = () => {
@@ -29,13 +35,8 @@ export default function ThemeToggle() {
     setIsDark(newTheme);
     
     // Update DOM
-    if (newTheme) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
+    document.documentElement.classList.toggle('dark', newTheme);
+    localStorage.setItem('theme', newTheme ? 'dark' : 'light');
   };
 
   // Prevent hydration mismatch
